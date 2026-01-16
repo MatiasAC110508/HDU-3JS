@@ -1,0 +1,100 @@
+:root {
+    --main-bg-color: #f0f0f0;
+    --main-text-color: #333333;
+    --button-bg-color: #4CAF50;
+    --button-text-color: white;
+    --button-hover-bg-color: #45a049;
+    --delete-button-bg: #f44336;
+    --delete-button-hover-bg: #da190b;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    color: #222222;
+    margin-bottom: 10px;
+    background-color: #e2e2e2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input {
+    margin-bottom: 10px;
+    width: 200px;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    align-self: center;
+}
+
+button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    max-width: 200px;
+    align-self: center;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 400px;
+    max-height: 300px;        /* altura máxima de la lista */
+    overflow-y: auto;         /* scroll vertical si hay muchas notas */
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fafafa;
+}
+
+li {
+    background-color: #ffffff;
+    margin: 5px 10px;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    gap: 10px;                /* espacio entre texto y botón */   
+}
+
+#notesList {
+    margin-top: 20px;
+    overflow-x: ellipsis; /* permite que el texto largo se divida en varias líneas */
+}
+
+button.delete-button {
+    background-color: var(--delete-button-bg);
+    flex-shrink: 0;           /* evita que se reduzca con el texto */
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+button.delete-button:hover {
+    background-color: var(--delete-button-hover-bg);
+}
+
+#error-message {
+    margin-top: 10px;
+    color: red;
+}
+
